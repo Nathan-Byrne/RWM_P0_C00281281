@@ -1,6 +1,5 @@
 import { describe, it, expect } from "vitest";
 import { mapSequ } from "./RunningTotal";
-// import { } from "./RunningTotal";
 
 describe("Running Total (Pass)", () => {
     it("Replace each number by the sum of itself and all the previous numbers", () => {
