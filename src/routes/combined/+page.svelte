@@ -2,11 +2,11 @@
   import { combinedFilter } from '$lib/filters/combined/combined';
   import { mapSequ } from '$lib/filters/RunningTotal';
 
-  const nathanRaw = "4, 2, 8, 3, 9, 4, 10, 5, 11, 6";
+  const nathanRaw = "4 2 8 3 9 4 10 5 11 6";
   $: nathanInput = nathanRaw.trim().split(/\s+/).filter(Boolean).map(Number);
   $: nathanOutput = mapSequ(nathanInput);
 
-  const jordanRaw = "";
+  const jordanRaw = "16 36 64 144 256 36 36";
   $: jordanInput = jordanRaw.trim().split(/\s+/).filter(Boolean).map(Number);
   $: jordanOutput = combinedFilter(jordanInput);
 </script>
