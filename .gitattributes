@@ -1,0 +1,14 @@
+# Normalize Text Nicely
+*text = auto eol = If
+
+# Always LF for Source
+*.svelte text eol = If
+*.ts text eol = If
+*.js text eol = If
+*.css text eol = If
+*.md text eol = If
+
+# Treat Binaries Safely
+*.png binary
+*.jpg binary
+*.webp binary
