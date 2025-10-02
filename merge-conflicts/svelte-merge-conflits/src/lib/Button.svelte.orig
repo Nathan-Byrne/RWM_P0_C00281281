@@ -1,7 +1,13 @@
 <script lang="ts">
-    import { createEventDispatcher } from "svelte";
+<<<<<<< HEAD
     export let label: string = "Submit"; // Changed Default
     export let variant: "primary" | "secondary" = "primary"; // New Prop
+</script>
+
+<button class="btn" data-variant={variant} on:click={() => console.log("Clicked")}>
+=======
+    import { createEventDispatcher } from "svelte";
+    export let label: string = "Click me";
     export let disabled: boolean = false;
     const dispatch = createEventDispatcher<{ pressed: { at: number }}>();
     function handleClick() {
@@ -10,7 +16,8 @@
     }
 </script>
 
-<button class="btn" data-variant={variant} {disabled} on:click={() => console.log("Clicked")}>
+<button class="btn" {disabled} on:click={() => console.log("Clicked")}>
+>>>>>>> Branch_B
     {label}
 </button>
 
@@ -22,8 +29,10 @@
         opacity: var(--opacity, 1);
     }
 
-    .btn:disabled { --opacity: 0.6; cursor: not-allowed; }
-
+<<<<<<< HEAD
     .btn[data-variant="primary"] { background: #2563EB; } /* Blue-600 */
     .btn[data-variant="secondary"] { background: #6B7280; } /* Gray-500 */
+=======
+    .btn:disabled { --opacity: 0.6; cursor: not-allowed; }
+>>>>>>> Branch_B
 </style>
