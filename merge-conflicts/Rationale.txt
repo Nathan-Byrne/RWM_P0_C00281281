@@ -1,0 +1,3 @@
+1. Most of the file was accepting both changes but restructuring them so the file still came out as readable with no errors.
+
+2. The end of the file was the only time there was a conflict that needed to be modified, which I reordered the css's to fix the merge conflict.
