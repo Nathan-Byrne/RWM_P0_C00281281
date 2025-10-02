@@ -1,6 +1,7 @@
 <script lang="ts">
     import { createEventDispatcher } from "svelte";
     export let label: string = "Branch A Submit"; // Changed Default
+    export let secondText : string = "FromBranchB";
     export let variant: "primary" | "secondary" = "primary"; // New Prop
     export let branchAVariable: string = "A";
     export let disabled: boolean = false;
@@ -14,6 +15,7 @@
 <button class="btn" data-variant={variant} {disabled} on:click={() => console.log("Clicked")}>
     {label}
     {branchAVariable}
+    {secondText}
 </button>
 
 <style>
@@ -27,6 +29,6 @@
     .btn:disabled { --opacity: 0.6; cursor: not-allowed; }
 
     .btn[data-variant="primary"] { background: #2563EB; } /* Blue-600 */
-    .btn[data-variant="secondary"] { background: #6B7280; } /* Gray-500 */
+    .btn[data-variant="secondary"] { background: #00ff2a; } /* Lime Green */
     .btn[data-variant="A"] { background: #2ceb25; } /* Green */
 </style>
