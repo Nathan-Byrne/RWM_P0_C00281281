@@ -1,0 +1,47 @@
+.container {
+    padding: 1rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.active {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+.submit {
+    margin-top: 1rem;
+    background-color: #2196f3;
+    color: white;
+    border-color: #2196f3;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
