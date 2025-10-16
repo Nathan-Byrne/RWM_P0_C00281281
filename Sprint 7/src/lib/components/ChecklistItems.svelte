@@ -9,19 +9,24 @@
 
   // Buttons to Update the Bar
   let buttons: ButtonData[] = [
-    { label: '1st Task', active: false },
-    { label: '2nd Task', active: false },
-    { label: '3rd Task', active: false },
-    { label: '4th Task', active: false },
-    { label: '5th Task', active: false }
+    { label: 'Num 1 Task', active: false },
+    { label: 'Num 2 Task', active: false },
+    { label: 'Num 3 Task', active: false },
+    { label: 'Num 4 Task', active: false },
+    { label: 'Num 5 Task', active: false }
   ];
 
   // Bar Percent
   let progress = 0;
+  let enableTooltip = false;
 
   // Log Percent Updates on Press
   function toggleButton(index: number) {
     buttons[index].active = !buttons[index].active;
+    if (buttons[index].active == true)
+      buttons[index].label = "Num " + (index + 1).toString() + " Task ✓";
+    else
+      buttons[index].label = "Num " + (index + 1).toString() + " Task";
     buttons = [...buttons];
   }
 
@@ -34,9 +39,24 @@
 
 <div class="container">
   <!-- Bar -->
-  <div class="progress-bar">
-    <div class="progress" style="width: {progress}%;"></div>
+  <div class="progress-bar" aria-hidden="true" 
+    on:mousemove={() => enableTooltip = true}
+    on:mouseout={() => enableTooltip = false}
+    on:blur={() => enableTooltip = false}>
+    <div class="progress" style="width: {progress}%;">
+      <!--<span class="tick">&#10003;</span>-->
+      <!--<span class="tick">&#10003;</span>-->
+      <!--<span class="tick">&#10003;</span>-->
+      <!--<span class="tick">&#10003;</span>-->
+      <!--<span class="tick">&#10003;</span>-->
+    </div>
   </div>
+
+  {#if enableTooltip && progress >= 50}
+    <div>
+      <span>Tooltip: 50% or more</span>
+    </div>
+  {/if}
 
   <!-- Task Buttons -->
   <div class="buttons">
@@ -51,4 +71,5 @@
 
   <!-- Submit Button-->
   <button class="submit" on:click={submitProgress}>Submit</button>
+
 </div>
