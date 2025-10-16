@@ -1,31 +1,36 @@
 {
-	"name": "rwm-p0-c00281281",
-	"private": true,
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test": "vitest",
-		"emit:results": "npx tsx scripts/emit-results.mjs"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^6.0.0",
-		"@sveltejs/kit": "^2.22.0",
-		"@sveltejs/vite-plugin-svelte": "^6.0.0",
-		"@vitest/ui": "^3.2.4",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"tsx": "^4.20.5",
-		"typescript": "^5.0.0",
-		"vite": "^7.0.4",
-		"vitest": "^3.2.4"
-	},
-	"dependencies": {
-		"peer-filter-c00287898": "github:JordanLewisPhelan/RWM_P0_C00287898#v0.1.1"
-	}
+  "name": "rwm-p0-c00281281",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest",
+    "emit:results": "npx tsx scripts/emit-results.mjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-svelte-csf": "^5.0.10",
+    "@storybook/sveltekit": "^9.1.12",
+    "@sveltejs/adapter-auto": "^6.0.0",
+    "@sveltejs/kit": "^2.22.0",
+    "@sveltejs/vite-plugin-svelte": "^6.0.0",
+    "@vitest/ui": "^3.2.4",
+    "storybook": "^9.1.12",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.0.0",
+    "vite": "^7.0.4",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "peer-filter-c00287898": "github:JordanLewisPhelan/RWM_P0_C00287898#v0.1.1"
+  }
 }
